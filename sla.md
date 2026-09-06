@@ -1,5 +1,5 @@
 ---
-title: Attest support and service statement
+title: Recert support and service statement
 ---
 
 # Support and service statement
@@ -8,7 +8,7 @@ Effective 6 September 2026.
 
 ## What the app runs on
 
-Attest runs entirely on Atlassian's Forge platform ("Runs on Atlassian"). Availability of
+Recert runs entirely on Atlassian's Forge platform ("Runs on Atlassian"). Availability of
 the app follows the availability of the customer's Atlassian site and of the Forge
 platform, which Atlassian operates and publishes status for at
 https://status.atlassian.com. We operate no servers of our own and therefore make no
@@ -16,7 +16,7 @@ separate uptime commitment.
 
 ## Support hours and response targets
 
-- Channel: GitHub Issues at https://github.com/ezekiel06/attest-site/issues, or private
+- Channel: GitHub Issues at https://github.com/ezekiel06/recert-site/issues, or private
   vulnerability reporting on the same repository for security matters.
 - First response: within two business days.
 - Security reports: acknowledged within one business day; fixes are prioritised above all

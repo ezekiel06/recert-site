@@ -1,8 +1,8 @@
 ---
-title: Attest security
+title: Recert security
 ---
 
-# Attest security
+# Recert security
 
 - **Runs on Atlassian**: all compute and storage is Atlassian-hosted; the app declares no
   external egress. Verified with Atlassian's eligibility check for every release.

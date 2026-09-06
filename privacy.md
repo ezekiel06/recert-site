@@ -1,12 +1,12 @@
 ---
-title: Attest privacy policy
+title: Recert privacy policy
 ---
 
-# Attest privacy policy
+# Recert privacy policy
 
 Effective 6 September 2026.
 
-Attest ("the app") is published on the Atlassian Marketplace by its developer ("we").
+Recert ("the app") is published on the Atlassian Marketplace by its developer ("we").
 This policy explains what the app processes and stores, where, and for how long.
 
 ## What the app reads
