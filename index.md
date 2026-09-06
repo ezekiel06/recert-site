@@ -13,6 +13,7 @@ exports the evidence.
 - [Privacy policy](privacy.html)
 - [Security](security.html)
 - [Support](support.html)
+- [Support and service statement](sla.html)
 - Terms: Attest is licensed under the
   [Atlassian Marketplace Standard Agreement](https://www.atlassian.com/licensing/marketplace/termsofuse).
 
