@@ -16,6 +16,8 @@ separate uptime commitment.
 
 ## Support hours and response targets
 
+- Hours of operation: Monday to Friday, 09:00–17:00 US Central Time (UTC−6, UTC−5 in
+  summer), excluding US public holidays.
 - Channel: GitHub Issues at https://github.com/ezekiel06/recert-site/issues, or private
   vulnerability reporting on the same repository for security matters.
 - First response: within two business days.

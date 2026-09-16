@@ -10,6 +10,7 @@ and Confluence space and why, routes each review to the person who owns that pro
 space, records keep / revoke / exception decisions with a reason and a timestamp, and
 exports the evidence.
 
+- [Getting started guide](getting-started.html) — install, snapshot, campaign, review, evidence
 - [Privacy policy](privacy.html)
 - [Security](security.html)
 - [Support](support.html)
