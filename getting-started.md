@@ -74,7 +74,7 @@ automatically after 90 days.
 
 A campaign sends one review per project or space to its owner.
 
-<a class="shot" href="assets/img/campaign-controls.png"><img src="assets/img/campaign-controls.png" alt="Campaigns section: name box (1), Nag issues box (2), Preview plan (3), Create campaign from preview (6)"></a>
+<a class="shot" href="assets/img/campaign-controls.png"><img src="assets/img/campaign-controls.png" alt="Campaigns section: name box (1), Nag issues box (2), Preview plan (3)"></a>
 
 1. Type a name for the campaign, for example *Q4 2026 access review*.
 2. Optional, **Nag issues in project**: type a Jira project key (for example `AS`). Recert
@@ -92,9 +92,12 @@ A campaign sends one review per project or space to its owner.
 4. **Include**: switch a row off to leave that project or space out of this campaign.
 5. **Override owner**: pick a person to send that review to someone other than the
    default owner.
-6. Scroll back up and click **Create campaign from preview** (marked 6 in the first
-   picture). If you skipped the preview, the same button reads **Create campaign from
-   latest snapshot**.
+
+<a class="shot" href="assets/img/create-campaign.png"><img src="assets/img/create-campaign.png" alt="Create campaign from preview button (6)"></a>
+
+{:start="6"}
+6. Scroll back up and click **Create campaign from preview**. If you skipped the preview,
+   the same button reads **Create campaign from latest snapshot**.
 
 Recert confirms how many reviews it created. Reviews are due 14 days later. Each reviewer
 now sees their reviews under **My reviews**, and the campaign appears in the **Campaigns**
