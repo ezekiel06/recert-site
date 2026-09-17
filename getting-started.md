@@ -2,104 +2,155 @@
 title: Recert — Getting started
 ---
 
+<style>
+  @media (min-width: 961px) {
+    .wrapper { width: 1180px; }
+    section { width: 860px; }
+  }
+  .shot { display: block; margin: 12px 0 6px; }
+  .shot img { width: 100%; border: 1px solid #d0d4da; border-radius: 4px; }
+  .pdf { display: inline-block; padding: 8px 14px; border: 1px solid #267CB9; border-radius: 4px; font-weight: bold; }
+</style>
+
 # Getting started with Recert
 
-Recert runs an access review of your Jira projects and Confluence spaces: it works out who
+<a class="pdf" href="assets/Recert-Getting-Started.pdf">Download this guide as a PDF</a>
+
+Recert runs an access review of your Jira projects and Confluence spaces. It works out who
 can see or administer each one and why, sends each review to the person who owns that
 project or space, records every keep / revoke / exception decision with a reason and a
-timestamp, and exports the evidence. This page walks through one complete review.
+timestamp, and exports the evidence for your auditor.
 
-**Roles.** A **Jira administrator** takes snapshots, creates campaigns, reopens signed
-reviews and exports evidence. A **reviewer** (the project lead or space administrator) only
-decides the lines assigned to them and signs off. Nothing in Recert changes anyone's access;
-revocations are carried out by your administrators in Jira or Confluence as usual.
+**How to read the pictures.** The red numbers in each picture match the numbered steps
+next to it. Click any picture to open it full size.
 
-## 1. Install and open the app
+**Who does what.** A **Jira administrator** takes snapshots, creates campaigns, reopens
+signed reviews and exports evidence. A **reviewer** (the project lead or space
+administrator) only decides the lines assigned to them and signs off. Nothing in Recert
+changes anyone's access; your administrators carry out revocations in Jira or Confluence as
+usual.
 
-1. Install Recert from the Atlassian Marketplace on your Jira Cloud site and accept the
-   requested scopes. Confluence spaces on the same site are reviewed from this one
-   installation; you do not need a separate Confluence install.
-2. In Jira, open **Apps → Recert** from the left sidebar. This is the Recert home page.
-3. On a fresh install the tables are empty and the app says *"No campaigns yet. Take a
-   snapshot, then create one."* That is expected.
+**Before you start.** Install Recert from the Atlassian Marketplace on your Jira Cloud site
+and accept the requested permissions. Confluence spaces on the same site are reviewed from
+this one installation; you do not need a separate Confluence install.
 
-![Recert home page with reviews and campaigns](assets/img/home.jpg)
+**Messages appear at the top of the Recert page**, not next to the button you clicked. If
+nothing seems to happen, scroll up.
 
-## 2. Take a snapshot
+## 1. Open Recert
 
-A snapshot is a point-in-time record of who has access to every project and space, and
-through which group, role or permission. Reviews are always made against a snapshot so
-that the evidence can be reproduced later.
+<a class="shot" href="assets/img/open-recert.png"><img src="assets/img/open-recert.png" alt="Jira sidebar with Apps, Recert highlighted (1); the My reviews table highlighted (2)"></a>
 
-1. On the home page, click **Take a new snapshot (background)**. You must be a Jira
-   administrator.
-2. The app confirms *"Snapshot job started"*. It runs in the background and usually
-   finishes in a minute or two; large sites take longer.
-3. There is nothing to click while it runs. If you try to create a campaign before it is
-   ready, the app answers *"no ready snapshot; take one first"* — wait and try again.
+1. In Jira's left sidebar, open **Apps**, then click **Recert**.
+2. **My reviews** lists every review assigned to you, with its campaign, due date, how many
+   lines are decided, and its status (*open* or *signed*). Click **Review** on a row to
+   open it.
 
-Snapshots not used by any campaign are deleted automatically after 90 days.
+On a fresh install the tables are empty and Recert says *"No campaigns yet. Take a
+snapshot, then create one."* That is expected; go to step 2.
 
-## 3. Preview the plan (optional)
+## 2. Take a snapshot (Jira administrator)
 
-1. Enter a campaign name in the first box (the default is *Quarterly access review*).
-2. Click **Preview plan**. The app lists every project and space in the latest snapshot
-   with its default owner: the **project lead** for Jira projects, the first **space
-   administrator** for Confluence spaces. A resource with no eligible owner is assigned to
-   you and flagged *unowned*.
-3. Untick **Include** to leave a resource out of this campaign, or pick a person under
-   **Override owner** to route that review to someone else.
+A snapshot records who has access to every project and space at this moment, and through
+which group, role or permission. Every review is made against a snapshot, so the evidence
+can be reproduced later.
 
-![Plan preview with include toggles and owner overrides](assets/img/plan-preview.jpg)
+<a class="shot" href="assets/img/take-snapshot.png"><img src="assets/img/take-snapshot.png" alt="Campaigns section with the Take a new snapshot (background) button highlighted (1)"></a>
 
-## 4. Create the campaign
+1. Scroll down to **Campaigns** and click **Take a new snapshot (background)**.
 
-1. Optional: type a Jira project key (for example `AS`) in **Nag issues in project** and
-   Recert will create one Jira issue per review in that project, assigned to the reviewer,
-   so Jira's own notifications remind them. The issue is resolved automatically when the
+<a class="shot" href="assets/img/snapshot-started.png"><img src="assets/img/snapshot-started.png" alt="Blue message at the top of the page: Snapshot job started (2)"></a>
+
+{:start="2"}
+2. A blue message appears at the top of the page: *"Snapshot job started … It becomes
+   usable when its status is ready."* The snapshot builds in the background, usually in a
+   minute or two (longer on large sites). There is nothing else to click.
+
+If you create a campaign before the snapshot is ready, Recert answers *"no ready snapshot;
+take one first"*. Wait a minute and try again. Snapshots that no campaign uses are deleted
+automatically after 90 days.
+
+## 3. Plan and create a campaign (Jira administrator)
+
+A campaign sends one review per project or space to its owner.
+
+<a class="shot" href="assets/img/campaign-controls.png"><img src="assets/img/campaign-controls.png" alt="Campaigns section: name box (1), Nag issues box (2), Preview plan (3), Create campaign from preview (6)"></a>
+
+1. Type a name for the campaign, for example *Q4 2026 access review*.
+2. Optional, **Nag issues in project**: type a Jira project key (for example `AS`). Recert
+   then creates one Jira issue per review in that project, assigned to the reviewer, so
+   Jira's own notifications remind them. Each issue is resolved automatically when its
    review is signed off.
-2. Click **Create campaign from preview** (or **Create campaign from latest snapshot** if
-   you skipped the preview).
-3. The app confirms how many assignments were created. Reviews are due 14 days after
-   creation. Each reviewer now sees their reviews under **My reviews** when they open
-   **Apps → Recert**; the campaign appears under **Campaigns** with a signed-off count.
+3. Click **Preview plan**. A **Plan preview** table appears below the campaign list, with
+   one row per project and space and its default owner: the **project lead** for Jira
+   projects, the first **space administrator** for Confluence spaces. A resource with no
+   eligible owner is assigned to you and marked *unowned*.
 
-## 5. Review and sign off
+<a class="shot" href="assets/img/plan-table.png"><img src="assets/img/plan-table.png" alt="Plan preview table: Include switches (4), Override owner pickers (5)"></a>
 
-Reviewers open **Apps → Recert**, find the row under **My reviews** and click **Review**.
-A review of a Jira project can also be opened from the **Recert** tab inside that project.
+{:start="4"}
+4. **Include**: switch a row off to leave that project or space out of this campaign.
+5. **Override owner**: pick a person to send that review to someone other than the
+   default owner.
+6. Scroll back up and click **Create campaign from preview** (marked 6 in the first
+   picture). If you skipped the preview, the same button reads **Create campaign from
+   latest snapshot**.
 
-![Review screen with people to certify and decision buttons](assets/img/review.jpg)
+Recert confirms how many reviews it created. Reviews are due 14 days later. Each reviewer
+now sees their reviews under **My reviews**, and the campaign appears in the **Campaigns**
+list with a *Signed* count.
 
-1. **People to certify** lists every person with unconditional access, the capability
-   (*See* or *Administer*) and *Why they have it* (the group, role or permission path).
-2. For each line click **Keep**, **Revoke** or **Exception**. Revoke and Exception require
-   a reason: type it in the **Reason** box first, then click the verdict. Each decision is
-   recorded with the reviewer's account and a UTC timestamp.
-3. **Listed, not certified** shows apps, portal customers, anonymous access and conditional
-   access. These are recorded in the evidence but are not decided line by line.
-4. When every line is decided, click **Sign off**. Decisions are then locked.
-5. Only a Jira administrator can **Reopen** a signed review; that creates a new version and
-   keeps the earlier decisions visible as *Superseded*, so evidence is never silently
-   changed.
+## 4. Review and sign off (reviewer)
 
-## 6. Export the evidence
+Open **Apps → Recert**, find the row under **My reviews** and click **Review**. A review of
+a Jira project can also be opened from the **Recert** tab inside that project.
 
-1. On the home page, under **Campaigns**, click **Evidence CSV** next to the campaign.
-2. Recert shows two files, `<campaign>-decisions.csv` (every certified line with its
-   decision, reason, decider and sign-off) and `<campaign>-listed.csv` (the accounts listed
-   but not certified), with a preview of the decisions file.
-3. Type a Jira project key and click **Attach CSV files to a new Jira issue**. Recert creates
-   an issue named *Evidence pack: <campaign>* in that project with both files attached.
-   Download them from the issue and hand them to your auditor.
+<a class="shot" href="assets/img/review.png"><img src="assets/img/review.png" alt="Review screen: People to certify (1), Reason box (2), Keep / Revoke / Exception (3), Sign off (4)"></a>
 
-![Evidence export with CSV preview and attach-to-issue button](assets/img/evidence.jpg)
+1. **People to certify** lists each person with access, what they can do (*See* or
+   *Administer*) and *Why they have it* (the group, role or permission that grants it).
+2. To revoke or record an exception, first type the reason in the **Reason** box.
+3. Then click **Keep**, **Revoke** or **Exception** on that person's line. Keep needs no
+   reason. Each decision is saved with your name and the time (UTC).
+4. When every line is decided, click **Sign off**. It shows how many lines are decided and
+   stays greyed out until all are. Decisions are then locked.
+
+<a class="shot" href="assets/img/review-listed.png"><img src="assets/img/review-listed.png" alt="Listed, not certified table below the Sign off button (5)"></a>
+
+{:start="5"}
+5. Below the Sign off button, **Listed, not certified** shows apps, portal customers,
+   anonymous access and conditional access (for example "the assignee of an issue"). They
+   are included in the evidence, but you do not decide them.
+
+Only a Jira administrator can **Reopen** a signed review. Reopening creates a new version
+and keeps the earlier decisions visible as *Superseded*, so evidence is never silently
+changed.
+
+## 5. Export the evidence (Jira administrator)
+
+<a class="shot" href="assets/img/evidence-button.png"><img src="assets/img/evidence-button.png" alt="Campaigns list with Evidence CSV buttons highlighted (1)"></a>
+
+1. In the **Campaigns** list, click **Evidence CSV** on the campaign's row.
+
+<a class="shot" href="assets/img/evidence.png"><img src="assets/img/evidence.png" alt="Evidence section: project key box (2), Attach CSV files to a new Jira issue (3), file names and preview (4)"></a>
+
+{:start="2"}
+2. An **Evidence** section appears. Type the key of the Jira project where the evidence
+   should be filed.
+3. Click **Attach CSV files to a new Jira issue**. Recert creates an issue named
+   *Evidence pack: &lt;campaign&gt;* in that project with both files attached. Download
+   them from the issue and give them to your auditor.
+4. The two files and a preview of the first are shown here so you can check them before
+   attaching:
+   - `<campaign>-decisions.csv`: every certified line with its decision, reason, who
+     decided and the sign-off.
+   - `<campaign>-listed.csv`: the accounts that were listed but not certified.
 
 ## Reminders and the daily job
 
 Once a day Recert resolves reminder issues for reviews that were signed off and refreshes
-display names from Atlassian. **Run daily job now (admin)** on the home page runs the same
-job immediately; the message it prints is the job's summary.
+display names from Atlassian. **Run daily job now (admin)**, next to the snapshot button,
+runs the same job immediately; the message it prints is the job's summary.
 
 ## Where the data lives
 
@@ -111,11 +162,13 @@ calls outside Atlassian and the vendor has no access to your data. Details are i
 
 | You see | Cause and fix |
 |---|---|
+| Nothing happens when I click a button | The message is at the top of the Recert page. Scroll up. |
 | *Only Jira administrators can create campaigns* | Snapshots, campaigns, reopen and evidence export need Jira administrator rights. Ask an admin, or grant the role. |
 | *no ready snapshot; take one first* | No snapshot has finished yet. Click **Take a new snapshot (background)**, wait a minute or two, then create the campaign. |
-| *Nothing assigned to you* | You are not the owner of any review in an open campaign. Owners are the project lead or space administrator unless an admin overrode them. |
+| *Nothing assigned to you* | You do not own any review in an open campaign. Owners are the project lead or space administrator unless an admin overrode them. |
 | A project or space is missing from the preview | It was not in the latest snapshot. Take a new snapshot after creating projects or spaces. |
+| **Sign off** is greyed out | Some lines are still *Undecided*. The button shows how many are decided. |
 | *Why they have it* says *path unavailable* | The access path could not be reconstructed for that line (typical for some team-managed projects). The decision still records normally. |
 | The reminder issue was not created | The nag project key must be a project the app can create issues in; check the campaign creation message for warnings. |
 
-Questions: see the [support page](support.html).
+Questions: see the [support page](support.html) or email support@recert.dev.
