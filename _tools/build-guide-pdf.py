@@ -40,6 +40,13 @@ def main():
     text = re.sub(r"\A---.*?---\s*", "", text, flags=re.S)          # front matter
     text = re.sub(r"<style>.*?</style>\s*", "", text, flags=re.S)    # page-only CSS
     text = re.sub(r'<a class="pdf".*?</a>\s*', "", text)             # link to itself
+    # the demo video cannot live in a PDF; leave a pointer to it instead
+    text = re.sub(r'<div class="demo".*?</div>\s*', "", text, flags=re.S)
+    text = text.replace(
+        "**How to read the pictures.**",
+        "**A one-minute demo video** of the whole flow is at "
+        "https://recert.dev/getting-started.html#demo\n\n**How to read the pictures.**",
+    )
     # kramdown's {:start="N"} is not python-markdown syntax; mark it and fix after
     text = re.sub(r'\{:start="(\d+)"\}\n', r"OLSTART\1\n\n", text)
     # site-relative links become absolute, so they work from a downloaded PDF

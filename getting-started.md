@@ -9,12 +9,24 @@ title: Recert — Getting started
   }
   .shot { display: block; margin: 12px 0 6px; }
   .shot img { width: 100%; border: 1px solid #d0d4da; border-radius: 4px; }
+  .demo { margin: 18px 0 6px; }
+  .demo video { border: 1px solid #d0d4da; border-radius: 4px; }
+  .hint { font-size: 0.9em; color: #555; margin-top: 4px; }
   .pdf { display: inline-block; padding: 8px 14px; border: 1px solid #267CB9; border-radius: 4px; font-weight: bold; }
 </style>
 
 # Getting started with Recert
 
 <a class="pdf" href="assets/Recert-Getting-Started.pdf">Download this guide as a PDF</a>
+
+<div class="demo" id="demo" markdown="0">
+  <h2>Watch it work (1 minute, no sound)</h2>
+  <video controls preload="metadata" poster="assets/img/open-recert.png" width="100%">
+    <source src="assets/recert-demo.mp4" type="video/mp4">
+    Your browser cannot play this video. <a href="assets/recert-demo.mp4">Download it instead.</a>
+  </video>
+  <p class="hint">Snapshot, campaign, a reviewer's keep and revoke decisions, sign-off, and the evidence export, in one pass.</p>
+</div>
 
 Recert runs an access review of your Jira projects and Confluence spaces. It works out who
 can see or administer each one and why, sends each review to the person who owns that
