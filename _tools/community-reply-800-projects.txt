@@ -1,0 +1,15 @@
+800 projects is about the point where the spreadsheet quietly gives up.
+
+The thing that took me a while to get straight: a report and a review aren't the same artifact. A report says who can see a project right now. What the auditor wants is proof that a named person looked at a specific list on a specific date and said yes or no to each line. Script output doesn't carry that second part, which is usually why it gets bounced back.
+
+Two things I'd push for at your size.
+
+Don't review 800 projects yourself - send each one to its project lead. They know whether Dave still needs to be in there and you don't, and it's two minutes of their time each. It's the only version of this that divides instead of piling up.
+
+And record how someone got access, not just that they had it. It arrives through a group, a role, a scheme entry, the project lead field. "Revoke Dave" is useless a week later when nobody remembers which one to pull - that's how people end up removing the role while the group quietly keeps him in.
+
+Worth allowing "keep, and here's why" as an answer too. Most lines in a real review are keeps, and the reasons on the odd ones are the only part anyone reads later.
+
+Full disclosure: I build one of the Marketplace apps in this space, Recert (https://marketplace.atlassian.com/apps/2953269953). Mentioning it because it's your exact problem, but everything above works without it.
+
+Curious though - in your yearly review, who actually signs off, you or the project owners?
