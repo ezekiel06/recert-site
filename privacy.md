@@ -4,7 +4,7 @@ title: Recert privacy policy
 
 # Recert privacy policy
 
-Effective 6 September 2026.
+Effective 26 September 2026.
 
 Recert ("the app") is published on the Atlassian Marketplace by its developer ("we").
 This policy explains what the app processes and stores, where, and for how long.
@@ -17,7 +17,7 @@ own Atlassian site and only while it is installed there:
 - the list of user accounts on the site (account id, display name, account type, active flag);
 - groups and group membership;
 - Jira project roles and their members, permission schemes, and application (licence) roles;
-- Confluence space permissions, space roles and role assignments, and page restrictions;
+- Confluence space permissions, space roles and role assignments;
 - the list of projects and spaces.
 
 The app does not read issue content, page content, comments, attachments, or email
@@ -50,8 +50,9 @@ your data: there is no developer-side database, dashboard, or export.
 ## Optional Jira issues
 
 If an administrator enables it for a campaign, the app creates one Jira issue per review
-in a project they choose, so Jira's own notifications remind the reviewer. These issues
-contain the project or space name, the campaign name, the due date and a link, and are
+in a project they choose, shortly after the campaign is created, so Jira's own notifications
+remind the reviewer. These issues contain the project or space key, the campaign name, the
+due date and a link, and are
 resolved by the app when the review is signed off. They stay in your Jira like any other
 issue.
 

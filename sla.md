@@ -4,7 +4,7 @@ title: Recert support and service statement
 
 # Support and service statement
 
-Effective 6 September 2026.
+Effective 26 September 2026.
 
 ## What the app runs on
 
@@ -18,10 +18,11 @@ separate uptime commitment.
 
 - Hours of operation: Monday to Friday, 09:00–17:00 US Central Time (UTC−6, UTC−5 in
   summer), excluding US public holidays.
-- Channel: GitHub Issues at https://github.com/ezekiel06/recert-site/issues, or private
-  vulnerability reporting on the same repository for security matters.
+- Channel: email support@recert.dev, or GitHub Issues at
+  https://github.com/ezekiel06/recert-site/issues. Security matters go to
+  security@recert.dev, or private vulnerability reporting on the same repository.
 - First response: within two business days.
-- Security reports: acknowledged within one business day; fixes are prioritised above all
+- Security reports: acknowledged within two business days; fixes are prioritised above all
   other work and released through the Atlassian Marketplace review process.
 - Business days: Monday to Friday, excluding public holidays, US time.
 

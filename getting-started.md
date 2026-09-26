@@ -74,22 +74,25 @@ can be reproduced later.
 <a class="shot" href="assets/img/snapshot-started.png"><img src="assets/img/snapshot-started.png" alt="Blue message at the top of the page: Snapshot job started (2)"></a>
 
 {:start="2"}
-2. A blue message appears at the top of the page: *"Snapshot job started … It becomes
-   usable when its status is ready."* The snapshot builds in the background, usually in a
-   minute or two (longer on large sites). There is nothing else to click.
+2. A blue message appears at the top of the page: *"Snapshot started. It runs in the
+   background; use Refresh status below to watch it. A campaign can be created once it says
+   ready."* Under **Latest snapshot** a status lozenge and a progress line (*"12 of 40
+   resources · started 2026-09-25"*) show how far it has got; click **Refresh status** until
+   it reads *ready*. Usually a minute or two, longer on large sites. If the lozenge reads
+   *failed*, that snapshot cannot be used for a campaign — take a new one.
 
 If you create a campaign before the snapshot is ready, Recert answers *"no ready snapshot;
-take one first"*. Wait a minute and try again. Snapshots that no campaign uses are deleted
+create one first"*. Wait a minute and try again. Snapshots that no campaign uses are deleted
 automatically after 90 days.
 
 ## 3. Plan and create a campaign (Jira administrator)
 
 A campaign sends one review per project or space to its owner.
 
-<a class="shot" href="assets/img/campaign-controls.png"><img src="assets/img/campaign-controls.png" alt="Campaigns section: name box (1), Nag issues box (2), Preview plan (3)"></a>
+<a class="shot" href="assets/img/campaign-controls.png"><img src="assets/img/campaign-controls.png" alt="Campaigns section: name box (1), Reminder issues box (2), Preview plan (3)"></a>
 
 1. Type a name for the campaign, for example *Q4 2026 access review*.
-2. Optional, **Nag issues in project**: type a Jira project key (for example `AS`). Recert
+2. Optional, **Reminder issues in project**: type a Jira project key (for example `OPS`). Recert
    then creates one Jira issue per review in that project, assigned to the reviewer, so
    Jira's own notifications remind them. Each issue is resolved automatically when its
    review is signed off.
@@ -163,9 +166,12 @@ changed.
 
 ## Reminders and the daily job
 
-Once a day Recert resolves reminder issues for reviews that were signed off and refreshes
-display names from Atlassian. **Run daily job now (admin)**, next to the snapshot button,
-runs the same job immediately; the message it prints is the job's summary.
+Once a day Recert comments on open reminder issues — seven days before the due date, the day
+before, and once a review is overdue — deletes snapshots older than 90 days that no campaign
+uses, and reports the accounts it stores to Atlassian so display names stay current and closed
+accounts are erased. A reminder issue is resolved as soon as its review is signed off, not by
+this job. **Run daily job now (admin)**, next to the snapshot button, runs the same job
+immediately; the message it prints is the job's summary.
 
 ## Where the data lives
 
@@ -184,6 +190,9 @@ calls outside Atlassian and the vendor has no access to your data. Details are i
 | A project or space is missing from the preview | It was not in the latest snapshot. Take a new snapshot after creating projects or spaces. |
 | **Sign off** is greyed out | Some lines are still *Undecided*. The button shows how many are decided. |
 | *Why they have it* says *path unavailable* | The access path could not be reconstructed for that line (typical for some team-managed projects). The decision still records normally. |
-| The reminder issue was not created | The nag project key must be a project the app can create issues in; check the campaign creation message for warnings. |
+| The reminder issue was not created | The **Reminder issues in project** key must be a project the app can create issues in. The issues are created in the background, so wait a minute and check the project; the campaign message reports a queueing failure. |
+| *"The Recert licence for this site is inactive or expired"* | The trial or subscription has lapsed. Snapshots, campaigns and evidence export stop; reviews already open can still be decided and signed off. Renew in Atlassian administration. |
+| *"Only the owner of this review or a Jira administrator may view it"* | Reviews are visible to the person they were routed to, the person who created the campaign, and Jira administrators. |
+| *"Could not check your Jira permissions"* | Jira was busy when the app asked whether you administer it. Wait a moment and try again. |
 
 Questions: see the [support page](support.html) or email support@recert.dev.

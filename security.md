@@ -4,7 +4,7 @@ title: Recert security policy
 
 # Recert security policy
 
-Effective 10 September 2026.
+Effective 26 September 2026.
 
 This page describes how Recert ("the app") is built, hosted and operated to keep customer
 data safe, and how to report a security problem. It is the security policy referenced on
@@ -64,7 +64,8 @@ no email addresses, passwords, tokens or credentials of any kind.
 ## 4. Access control inside the app
 
 - **Administrator actions:** only Jira administrators can run snapshots, create campaigns,
-  configure reminders, or reopen a signed-off review. The app checks this with Jira's own
+  configure reminders, reopen a signed-off review, export the evidence pack, or see reviews
+  assigned to other people. The app checks this with Jira's own
   permission service on every request, as the acting user, and never caches the result.
 - **Reviewer actions:** a review can be decided only by its assigned owner or a Jira
   administrator. Every decision records the deciding account and a UTC timestamp.
@@ -79,11 +80,7 @@ no email addresses, passwords, tokens or credentials of any kind.
 
 ## 5. Scopes and least privilege
 
-The app requests only the read scopes required to compute effective access, plus the write
-scope needed to create reminder issues. The full list is shown on the Marketplace listing
-and must be approved by a site administrator at install time. Any change to the app's scopes
-is released as a new major version, which administrators must explicitly approve before it
-takes effect on their site.
+The app requests the scopes it needs to read effective access (including `manage:jira-configuration`, which it uses read-only to list group members, project roles and application roles), the write scope needed to create reminder issues, and Atlassian's personal-data reporting scope. The full list is shown on the Marketplace listing and must be approved by a site administrator at install time.
 
 The app cannot change group membership, project roles or permission schemes. Revocations
 decided in a review are recorded as evidence and carried out by the customer's own
@@ -100,11 +97,11 @@ operational information (timings, counts, error codes) and no customer data.
 
 - The access-resolution logic is pure, isolated from all I/O, and covered by unit,
   property-based and end-to-end tests that run on every change.
-- Resolver output is verified against Jira's own permission-check API on a test site before
-  each release.
-- Every release runs Atlassian's Forge lint and "Runs on Atlassian" eligibility checks
-  before deployment.
-- Dependencies are pinned and reviewed for known vulnerabilities before each release.
+- Resolver output is verified against Jira's own permission-check API on a test site, and the
+  app is installed from the public listing onto a clean site and walked end to end, before a
+  release we consider significant.
+- Deployments run Atlassian's Forge lint and the "Runs on Atlassian" eligibility check.
+- Dependencies are pinned, and reviewed for known vulnerabilities with `npm audit`.
 - Development, staging and production environments are separate Forge environments;
   customers only ever receive production builds.
 - The app source is maintained in a private repository with access limited to the developer.
