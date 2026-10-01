@@ -17,5 +17,10 @@ exports the evidence.
 - [Support and service statement](sla.html)
 - [Terms of use](terms.html)
 
+Guides:
+
+- [Who has access to a Jira project?](jira-who-has-access.html) — every route in, and why the People screen is not the answer
+- [SOC 2 and ISO 27001 access reviews for Jira and Confluence](access-review-evidence.html) — what the evidence has to show
+
 Recert runs entirely on Atlassian's infrastructure ("Runs on Atlassian"): no data leaves
 your Atlassian site.

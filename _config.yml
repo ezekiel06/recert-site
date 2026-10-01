@@ -1,2 +1,6 @@
 title: Recert
 theme: jekyll-theme-minimal
+url: https://recert.dev
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
