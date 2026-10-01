@@ -22,7 +22,7 @@ separate uptime commitment.
   https://github.com/ezekiel06/recert-site/issues. Security matters go to
   security@recert.dev, or private vulnerability reporting on the same repository.
 - First response: within two business days.
-- Security reports: acknowledged within two business days; fixes are prioritised above all
+- Security reports: acknowledged within two business days; fixes are prioritized above all
   other work and released through the Atlassian Marketplace review process.
 - Business days: Monday to Friday, excluding public holidays, US time.
 

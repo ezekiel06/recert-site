@@ -191,7 +191,7 @@ calls outside Atlassian and the vendor has no access to your data. Details are i
 | **Sign off** is greyed out | Some lines are still *Undecided*. The button shows how many are decided. |
 | *Why they have it* says *path unavailable* | The access path could not be reconstructed for that line (typical for some team-managed projects). The decision still records normally. |
 | The reminder issue was not created | The **Reminder issues in project** key must be a project the app can create issues in. The issues are created in the background, so wait a minute and check the project; the campaign message reports a queueing failure. |
-| *"The Recert licence for this site is inactive or expired"* | The trial or subscription has lapsed. Snapshots, campaigns and evidence export stop; reviews already open can still be decided and signed off. Renew in Atlassian administration. |
+| *"The Recert license for this site is inactive or expired"* | The trial or subscription has lapsed. Snapshots, campaigns and evidence export stop; reviews already open can still be decided and signed off. Renew in Atlassian administration. |
 | *"Only the owner of this review or a Jira administrator may view it"* | Reviews are visible to the person they were routed to, the person who created the campaign, and Jira administrators. |
 | *"Could not check your Jira permissions"* | Jira was busy when the app asked whether you administer it. Wait a moment and try again. |
 

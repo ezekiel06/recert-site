@@ -40,7 +40,7 @@ and in the [support and service statement](sla.html).
 
 **What the app is.** The app helps you run access reviews and keep a record of them. It does
 not change anyone's access in Jira or Confluence by itself; decisions to revoke access are
-carried out by your administrators. You remain responsible for your own compliance programme
+carried out by your administrators. You remain responsible for your own compliance program
 and for the conclusions you draw from the app's reports.
 
 ## 3. Changes

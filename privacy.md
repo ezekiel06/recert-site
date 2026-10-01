@@ -16,7 +16,7 @@ own Atlassian site and only while it is installed there:
 
 - the list of user accounts on the site (account id, display name, account type, active flag);
 - groups and group membership;
-- Jira project roles and their members, permission schemes, and application (licence) roles;
+- Jira project roles and their members, permission schemes, and application (license) roles;
 - Confluence space permissions, space roles and role assignments;
 - the list of projects and spaces.
 
@@ -44,7 +44,7 @@ addresses, passwords, or credentials.
 
 All storage is Atlassian-hosted Forge storage in the region of your Atlassian site. The
 app makes no calls to any server outside Atlassian: it has no external egress and
-qualifies for Atlassian's "Runs on Atlassian" programme. We, the developer, cannot read
+qualifies for Atlassian's "Runs on Atlassian" program. We, the developer, cannot read
 your data: there is no developer-side database, dashboard, or export.
 
 ## Optional Jira issues
