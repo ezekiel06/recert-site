@@ -15,8 +15,7 @@ exports the evidence.
 - [Security](security.html)
 - [Support](support.html)
 - [Support and service statement](sla.html)
-- Terms: Recert is licensed under the
-  [Atlassian Marketplace Standard Agreement](https://www.atlassian.com/licensing/marketplace/termsofuse).
+- [Terms of use](terms.html)
 
 Recert runs entirely on Atlassian's infrastructure ("Runs on Atlassian"): no data leaves
 your Atlassian site.
