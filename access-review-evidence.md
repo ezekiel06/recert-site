@@ -40,7 +40,7 @@ For each review period, and for each Jira project and Confluence space in scope:
   access last quarter, you cannot reconstruct it reliably afterwards, so the snapshot has to be
   taken at review time and kept.
 - **Two products, two permission models.** Confluence spaces use space permissions or space
-  roles, with their own groups and licence classes; a review covering only Jira leaves half the
+  roles, with their own groups and license classes; a review covering only Jira leaves half the
   scope out.
 
 ## Common reasons this evidence fails
@@ -54,7 +54,7 @@ For each review period, and for each Jira project and Confluence space in scope:
 
 [Recert](https://marketplace.atlassian.com/apps/2953269953) produces the evidence above for
 Jira projects and Confluence spaces in one review. It snapshots effective access, including
-access through groups, roles, permission schemes and licence classes, leaving app accounts out. It
+access through groups, roles, permission schemes and license classes, leaving app accounts out. It
 routes one review to each project lead or space administrator, records keep / revoke / exception
 decisions with reasons, tracks sign-off, and exports the result as CSV files attached to a Jira
 issue. It runs entirely on Atlassian's infrastructure; no data leaves your site.

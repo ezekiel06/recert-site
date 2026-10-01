@@ -79,7 +79,7 @@ expect you to have done and few teams finish.
 
 [Recert](https://marketplace.atlassian.com/apps/2953269953) is a Jira Cloud app that does
 the expansion above for every Jira project and Confluence space: it lists each person who
-can browse or administer, with the route (scheme grant, role, group, licence class) that gives
+can browse or administer, with the route (scheme grant, role, group, license class) that gives
 them access. It then sends one review per project to its lead, records keep / revoke /
 exception decisions with a reason, and exports the evidence. It runs entirely on Atlassian's
 infrastructure.
